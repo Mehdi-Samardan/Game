@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* user-select: none; */
+}
+body{
+    height: 100vh;
+    background-color: black;
+}
+.hidden{
+    display: none !important;
+}
+
+canvas{
+    cursor: crosshair;
+}
+#score{
+    position: absolute;
+    top: 30;
+    left: 0;
+    padding: 1rem;
+    color: white;
+    font-size: 2rem;
+    /* user-select: none; */
+    font-family: fantasy;
+}
+#kill{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    padding-top: 3.7rem;
+    color: white;
+    font-size: 2rem;
+    /* user-select: none; */
+    font-family: fantasy;
+}
+.panel{                                     
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    padding: 2rem;
+    border: 2px solid springgreen;
+    border-radius: .5rem;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.panel h2{
+  color: springgreen;
+}
+.panel p{
+    color: wheat;
+}
+.init-bt {
+    padding: 10px 40px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    /* user-select: none; */
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: .8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0,.8,.26,.99);
+  }
+  
+  .init-bt:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: .7s cubic-bezier(0,.8,.26,.99);
+    z-index: -1;
+    background-color: black!important;
+    box-shadow: 0 -4px springgreen inset, 0 4px springgreen inset, -4px 0 springgreen inset, 4px 0 springgreen inset;
+  }
+  
+  .init-bt:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    
+    transition: .7s cubic-bezier(0,.8,.26,.99);
+  }
+  
+  .init-bt:hover:before {
+    box-shadow:  inset;
+  }
+  
+  .init-bt:hover:after {
+    box-shadow: 0 4px 0 0 springgreen;
+  }
+  
+  .init-bt:active {
+    transform: translateY(4px);
+  }
+  
+  .init-bt:active:after {
+    box-shadow: 0 0px 0 0 springgreen;
+  }
