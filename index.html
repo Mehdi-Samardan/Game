@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Game.css">
-    <title>Pew-Pew</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Game.css">
+  <title>Pew-Pew</title>
 </head>
 <body>
-    <div id="score"></div>
-    <div id="kill"></div>
-    <div id="start" class="panel">
-        <h2>Pew-Pew</h2><br>
-        <p>🔥 Protect yourself from enemies 🔥 </p><br>
-        <button class="init-bt" onclick="init()">Start</button>
-    </div>
-    <canvas id="canvas"></canvas>
-<script src="Game.js"></script>
+  <div id="start" class="panel">
+    <h2>Pew-Pew</h2>
+    <div class="divider"></div>
+    <p>🔥 Protect yourself from enemies 🔥</p>
+    <p style="font-size:0.78rem;opacity:0.5">Click to shoot &nbsp;·&nbsp; Hold for auto-fire</p>
+    <div class="divider"></div>
+    <button class="init-bt" onclick="init()"><span>Start</span></button>
+  </div>
+
+  <div id="gameover" class="panel hidden">
+    <h2>Game Over</h2>
+    <div class="divider"></div>
+    <p id="final-score"></p>
+    <p id="high-score-display"></p>
+    <div class="divider"></div>
+    <button class="init-bt" onclick="init()"><span>Play Again</span></button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <script src="Game.js"></script>
 </body>
+</html>
