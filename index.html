@@ -7,15 +7,29 @@
   <title>Pew-Pew</title>
 </head>
 <body>
+
+  <!-- Start screen -->
   <div id="start" class="panel">
     <h2>Pew-Pew</h2>
     <div class="divider"></div>
-    <p>🔥 Protect yourself from enemies 🔥</p>
-    <p style="font-size:0.78rem;opacity:0.5">Click to shoot &nbsp;·&nbsp; Hold for auto-fire</p>
+    <p>🔥 Survive the endless wave 🔥</p>
+    <p class="hint">WASD move &nbsp;·&nbsp; Mouse aim &nbsp;·&nbsp; Click / Hold shoot</p>
+    <div class="divider"></div>
+
+    <!-- Theme picker -->
+    <div class="theme-label">THEME</div>
+    <div class="theme-row">
+      <button class="theme-btn active" data-theme="CYBER"   onclick="setTheme('CYBER')"   style="--c:#00ff88">CYBER</button>
+      <button class="theme-btn"        data-theme="INFERNO" onclick="setTheme('INFERNO')" style="--c:#ff5522">INFERNO</button>
+      <button class="theme-btn"        data-theme="FROST"   onclick="setTheme('FROST')"   style="--c:#44aaff">FROST</button>
+      <button class="theme-btn"        data-theme="VOID"    onclick="setTheme('VOID')"    style="--c:#cc55ff">VOID</button>
+    </div>
+
     <div class="divider"></div>
     <button class="init-bt" onclick="init()"><span>Start</span></button>
   </div>
 
+  <!-- Game over screen -->
   <div id="gameover" class="panel hidden">
     <h2>Game Over</h2>
     <div class="divider"></div>
@@ -23,6 +37,48 @@
     <p id="high-score-display"></p>
     <div class="divider"></div>
     <button class="init-bt" onclick="init()"><span>Play Again</span></button>
+  </div>
+
+  <!-- Help button -->
+  <button id="help-btn" class="help-btn" onclick="toggleHelp()">? HOW TO PLAY</button>
+
+  <!-- Help panel -->
+  <div id="help-panel" class="help-panel hidden">
+    <div class="help-header">
+      <span class="help-title">HOW TO PLAY</span>
+      <button class="help-close" onclick="closeHelp()">✕</button>
+    </div>
+    <div class="help-divider"></div>
+    <div class="help-section">
+      <div class="help-section-title">🎮 CONTROLS</div>
+      <div class="help-row"><kbd>W A S D</kbd><span>Move player</span></div>
+      <div class="help-row"><kbd>Mouse</kbd><span>Aim</span></div>
+      <div class="help-row"><kbd>Click</kbd><span>Shoot</span></div>
+      <div class="help-row"><kbd>Hold</kbd><span>Auto-fire</span></div>
+      <div class="help-row"><kbd>H</kbd><span>Toggle this panel</span></div>
+    </div>
+    <div class="help-divider"></div>
+    <div class="help-section">
+      <div class="help-section-title">⚔️ ENEMIES</div>
+      <div class="help-row"><span class="dot red"></span><span>Large — 3 hits — +20 pts</span></div>
+      <div class="help-row"><span class="dot orange"></span><span>Medium — 2 hits — +15 pts</span></div>
+      <div class="help-row"><span class="dot yellow"></span><span>Small — 1 hit — +10 pts</span></div>
+    </div>
+    <div class="help-divider"></div>
+    <div class="help-section">
+      <div class="help-section-title">📈 RULES</div>
+      <div class="help-row"><span>❤️</span><span>3 lives — 1.6s invincibility</span></div>
+      <div class="help-row"><span>⚡</span><span>Speed +22% every 8s</span></div>
+      <div class="help-row"><span>👾</span><span>+1 enemy every 5 kills</span></div>
+      <div class="help-row"><span>🏆</span><span>Best score saved locally</span></div>
+    </div>
+    <div class="help-divider"></div>
+    <div class="help-section">
+      <div class="help-section-title">💡 TIPS</div>
+      <div class="help-row"><span>→</span><span>Keep moving — don't stand still</span></div>
+      <div class="help-row"><span>→</span><span>Shoot big enemies to shrink them</span></div>
+      <div class="help-row"><span>→</span><span>Blink = invincible — use it</span></div>
+    </div>
   </div>
 
   <canvas id="canvas"></canvas>
