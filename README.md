@@ -1,89 +1,72 @@
-# 🔥 Pew-Pew
+# Pew-Pew
 
-A fast-paced browser-based shooting game where you protect yourself from incoming enemies. Click to shoot and use your mouse to aim in real-time!
+A fast-paced browser shooting game. Survive endless waves of enemies, collect power-ups, and chase your high score.
 
-## 🎮 Game Overview
-
-Pew-Pew is an action game built with vanilla JavaScript and Canvas. Navigate the game by controlling your character with your mouse and eliminate enemies by clicking to shoot. The game tracks your score and kill count as you progress.
-
-## ✨ Features
-
-- **Real-time Mouse Tracking**: Aim and shoot precisely where your mouse points
-- **Dynamic Enemy System**: Face waves of enemies to survive
-- **Score Tracking**: Keep track of your score and kill count
-- **Smooth Canvas Rendering**: Optimized graphics using HTML5 Canvas API
-- **Responsive Design**: Fully responsive gameplay that adapts to your window size
-
-## 🛠️ Technologies Used
-
-- **HTML5**: Game structure and canvas element
-- **CSS3**: Styling and animations
-- **JavaScript**: Core game logic, physics, and interactions
-- **Canvas API**: Graphics rendering and game rendering
-
-## 🌐 Play Now
-
-**[🎮 Play Pew-Pew Live](https://pew-pew-game.netlify.app/)**
-
-Try the game instantly in your browser - no installation needed!
-
-## 🚀 Quick Start
-
-1. Clone the repository
-2. Open `index.html` in your web browser
-3. Click the **Start** button to begin playing
-4. Move your mouse to aim and click to shoot
-5. Protect yourself from enemies and rack up points!
-
-## 📁 Project Structure
-
-```
-Game/
-├── index.html      # Main HTML file and game structure
-├── Game.js         # Game logic and mechanics
-├── Game.css        # Styling and animations
-└── README          # This file
-```
-
-## 🎮 How to Play
-
-| Action         | Control                      |
-| -------------- | ---------------------------- |
-| **Aim**        | Move your mouse              |
-| **Shoot**      | Click anywhere on the screen |
-| **Start Game** | Click the "Start" button     |
-
-## 📊 Game Mechanics
-
-- **Player**: Controlled by mouse position, can shoot in any direction
-- **Bullets**: White circles that travel toward your cursor position
-- **Enemies**: Spawn and attack the player
-- **Score System**: Earn points for eliminating enemies
-- **Kill Counter**: Track the number of enemies defeated
-
-## 🔮 Future Enhancements
-
-- Add sound effects and background music
-- Multiple difficulty levels
-- Power-ups and special abilities
-- Leaderboard system
-- Mobile touch controls
-- Enemy variety and boss battles
-
-## 💡 Tips & Tricks
-
-- **Quick Reflexes**: The faster you react, the better your score
-- **Precision Aiming**: Use small mouse movements for accurate shots
-- **Positioning**: Try to maintain distance from enemies while shooting
-
-## 📝 License
-
-This project is open source and available for personal and educational use.
-
-## 👤 Author
-
-**Mehdi Samardan**
+No installation needed — just open `index.html` in a browser.
 
 ---
 
-**Enjoy the game! Happy shooting! 🎯**
+## How to Play
+
+| Action | Control |
+| --- | --- |
+| Move | `W A S D` |
+| Aim | Mouse |
+| Shoot | Click |
+| Auto-fire | Hold click *(requires Rapid Fire power-up)* |
+| Help panel | `H` |
+
+---
+
+## Power-ups
+
+Power-ups drop randomly from killed enemies (22% chance).
+
+| Icon | Name | Effect | Duration |
+| --- | --- | --- | --- |
+| 🔥 | Rapid Fire | Hold mouse to auto-fire | 30s |
+| 🛡 | Shield | Full invincibility | 8s |
+| ⏱ | Slow-Mo | Enemies at half speed | 10s |
+
+---
+
+## Scoring
+
+- Hit a large enemy: **+5 pts** per hit, **+20 pts** to kill
+- Chain kills within 2.5s to activate a **combo multiplier** (x2, x3...)
+- Speed increases every 8 seconds — harder over time
+
+---
+
+## Themes
+
+Pick a visual theme from the start screen: **Cyber**, **Inferno**, **Frost**, **Void**, **Mono**
+
+Your choice is saved automatically.
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/Mehdi-Samardan/Game.git
+cd Game
+open index.html
+```
+
+Or with a local server:
+
+```bash
+python3 -m http.server 8080
+# then open http://localhost:8080
+```
+
+---
+
+## Stack
+
+Vanilla JS · HTML5 Canvas · CSS — no dependencies, no build step.
+
+---
+
+Made by [Mehdi Samardan](https://github.com/Mehdi-Samardan)
